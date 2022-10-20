@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum TableViewSections: CaseIterable, Int {
+enum TableViewSections: Int, CaseIterable {
     case oneSection
     case anotherSection
     case thirdSection
@@ -33,7 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath) as! CellsTableViewCell
     }
     
 
