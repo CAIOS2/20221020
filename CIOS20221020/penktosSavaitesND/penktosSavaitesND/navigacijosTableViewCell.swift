@@ -9,6 +9,12 @@ import UIKit
 
 class navigacijosTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var fotoCeleje: UIImageView!
+    
+    @IBOutlet weak var labelisCeleje: UILabel!
+    
+    @IBOutlet weak var antrasLabelisCeleje: UITextField!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -16,8 +22,13 @@ class navigacijosTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        uzapvalina()
 
         // Configure the view for the selected state
     }
     
+    func uzapvalina() {
+        fotoCeleje.layer.cornerRadius = 10
+        
+    }
 }
