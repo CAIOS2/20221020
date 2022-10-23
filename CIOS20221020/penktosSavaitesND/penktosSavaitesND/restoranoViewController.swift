@@ -9,6 +9,8 @@ import UIKit
 
 class restoranoViewController: UIViewController {
 
+    @IBOutlet weak var restoranoLabelis: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

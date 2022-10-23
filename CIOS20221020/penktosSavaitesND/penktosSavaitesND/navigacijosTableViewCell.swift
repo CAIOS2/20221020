@@ -12,9 +12,7 @@ class navigacijosTableViewCell: UITableViewCell {
     @IBOutlet weak var fotoCeleje: UIImageView!
     
     @IBOutlet weak var labelisCeleje: UILabel!
-    
-    @IBOutlet weak var antrasLabelisCeleje: UITextField!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -28,7 +26,7 @@ class navigacijosTableViewCell: UITableViewCell {
     }
     
     func uzapvalina() {
-        fotoCeleje.layer.cornerRadius = 10
+        fotoCeleje.layer.cornerRadius = 20
         
     }
 }

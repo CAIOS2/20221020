@@ -21,6 +21,15 @@ class ViewController: UIViewController {
         lentaPradine.dataSource = self
         lentaPradine.register(UINib(nibName: "navigacijosTableViewCell", bundle: nil), forCellReuseIdentifier: "cele")
     }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "restoranuSegas" {
+//            performSegue(withIdentifier: "restoranuSegas", sender: nil)
+    
+//}
+//        else {
+//            performSegue(withIdentifier: "receptoSegas", sender: nil)
+//        }
+//    }
 }
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,7 +46,8 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             print(restoranas[indexPath.row])
-        }
-}
+            self.performSegue(withIdentifier: "restoranoSegas", sender: nil)
+                    }
+                }
 
 
