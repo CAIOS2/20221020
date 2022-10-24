@@ -8,6 +8,10 @@
 import UIKit
 
 
+enum RecordType: CaseIterable {
+    case restaurant
+    case dish
+}
 
 
 
@@ -44,7 +48,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        2
+        let countOfSections = RecordType.allCases.count
+        return countOfSections
     }
     
 
