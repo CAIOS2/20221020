@@ -15,15 +15,23 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        cell.textLabel?.text = "testText"
+        if indexPath.section == 0 {
+            
+            cell.textLabel?.text = restaurants[indexPath.row]
+            cell.imageView?.image = UIImage(named: "rest\(indexPath.row+1)")
+        } else {
+            
+            cell.textLabel?.text = recipes[indexPath.row]
+            cell.imageView?.image = UIImage(named: "rec\(indexPath.row+1)")
+        }
         return cell
     }
     
     
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {return "First section"}
-        return "Second section"
+        if section == 0 {return "Restaurants"}
+        return "Recipes"
     }
     
 }

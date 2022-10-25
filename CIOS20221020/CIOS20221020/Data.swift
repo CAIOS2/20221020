@@ -7,10 +7,21 @@
 
 import Foundation
 
-enum Sections {
+enum Sections: CaseIterable {
     case restaurants
     case recipes
 }
+
+struct item {
+    
+    let name:String
+    let section:Sections
+    let pic:String
+}
+
+let items = [item]()
+
+
 
 let restaurants = [
    "Pot Au Feu",
