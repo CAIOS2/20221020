@@ -63,9 +63,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let listOfRecords = [
         ["restaurant", "Restaurant Zero", "rest0"],
         ["restaurant", "First Restaurant", "rest1"],
+        ["dish", "First Dish", "dish0"],
         ["restaurant", "Second Restaurant", "rest2"],
         ["restaurant", "Last Restaurant", "rest3"],
-        ["dish", "First Dish", "dish0"],
         ["dish", "Second Dish", "dish1"],
         ["dish", "Last Dish", "dish2"]
     ]
@@ -81,7 +81,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return qnt
     }
     
-    
+    //pabandom pasidaryti duomenu masyva pagal tipus
+    func dataByTypes(_ type: String) -> [[String]] {
+        var typeData = [[String]]()
+        for i in 0..<self.listOfRecords.count {
+            if self.listOfRecords[i][0] == type {
+                typeData.append(self.listOfRecords[i])
+            }
+        }
+        
+        return typeData
+    }
     
     
 
@@ -135,10 +145,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        let record = self.listOfRecords[indexPath.row][1]
-        let recordType = self.listOfRecords[indexPath.row][0]
+        // let record = self.listOfRecords[indexPath.row][1]
+        // let recordType = self.listOfRecords[indexPath.row][0]
         
-        cell.textLabel?.text = "hi, \(indexPath.section)::\(indexPath.row) :: \(indexPath.item), \(recordType), \(record)"
+        let recordsOfType = dataByTypes(String(describing:RecordType.allCases[indexPath.section]))
+        let record = recordsOfType[indexPath.row][1]
+        let recordType = recordsOfType[indexPath.row][0]
+        
+        cell.textLabel?.text = "\(recordType), \(record)"
         return cell
     }
     
