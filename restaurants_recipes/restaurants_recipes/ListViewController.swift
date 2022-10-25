@@ -19,6 +19,12 @@ enum ResSection {
     case restaurant
 }
 
+final class Shared {
+    static let shared = Shared()
+    
+    var resData: ResData!
+}
+
 class ListViewController: UIViewController {
     
     @IBOutlet weak var resTableView: UITableView!
@@ -94,19 +100,12 @@ class ListViewController: UIViewController {
         resTableView.register(UINib(nibName: "CellView", bundle: nil), forCellReuseIdentifier: "dataCell")
     }
     
-    var sendingDataToRestaurant: ((ResData) -> ())!
-    var sendingDataToRecipe: ((ResData) -> ())!
-    
     func performTransition(data: ResData) {
+        Shared.shared.resData = data
         switch(data.section) {
         case .restaurant:
-            // at sendingDataToRestaurant()
-            // Fatal error: unexpectedly found nil while implicitly unwrapping an Optional value
-            sendingDataToRestaurant(data)
             performSegue(withIdentifier: "segueToRestaurant", sender: nil)
         case .recipe:
-            // same error
-            sendingDataToRecipe(data)
             performSegue(withIdentifier: "segueToRecipe", sender: nil)
             
         }

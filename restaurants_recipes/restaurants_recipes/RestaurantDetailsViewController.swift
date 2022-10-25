@@ -15,19 +15,12 @@ class RestaurantDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    func setData(data: ResData) {
-        imageView.image = data.photo
+        imageView = ImagePrepare.prepareAll(inputView: imageView)
+        let data = Shared.shared.resData!
         nameLabel.text = data.name
+        imageView.image = data.photo
         if let description = data.description {
             descriptionLabel.text = description
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? ListViewController {
-            destination.sendingDataToRestaurant = setData
         }
     }
 }
