@@ -14,8 +14,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       //var  tableVC = TableViewController()
        tableView.dataSource = self
+        
     }
 
 
