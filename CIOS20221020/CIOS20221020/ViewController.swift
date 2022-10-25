@@ -45,7 +45,7 @@ import UIKit
 //                  record6
 //                )
 
-// fake structure [(type: String, title: String, imageTitle: String)]
+
 
 
 // = section index
@@ -59,7 +59,7 @@ enum RecordType: Int, CaseIterable {
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-   
+    // fake structure [(type: String, title: String, imageTitle: String)]
     let listOfRecords = [
         ["restaurant", "Restaurant Zero", "rest0"],
         ["restaurant", "First Restaurant", "rest1"],
@@ -70,7 +70,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         ["dish", "Last Dish", "dish2"]
     ]
 
-
+    // suskaiciuojam pagal tipus kiek irasu
+    func quantityByTypes(_ type: String) -> Int {
+        var qnt = 0
+        for i in 0..<self.listOfRecords.count {
+            if self.listOfRecords[i][0] == type {
+                qnt += 1
+            }
+        }
+        return qnt
+    }
+    
+    
+    
     
 
     @IBOutlet weak var tableView: UITableView!
@@ -102,12 +114,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = UILabel()
         let type = String(describing:RecordType.allCases[section])
-        
         label.text = "Section: \(type)"
         label.backgroundColor = .systemGray6
-        
-        
-        
         return label
     }
     
@@ -118,7 +126,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        4
+        let qnt = quantityByTypes(String(describing:RecordType.allCases[section]))
+        return qnt
     }
     
     
@@ -126,7 +135,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        let record = self.listOfRecords[indexPath.row]
+        let record = self.listOfRecords[indexPath.row][1]
         let recordType = self.listOfRecords[indexPath.row][0]
         
         cell.textLabel?.text = "hi, \(indexPath.section)::\(indexPath.row) :: \(indexPath.item), \(recordType), \(record)"
