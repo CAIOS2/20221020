@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
        tableView.dataSource = self
+        tableView.delegate = self
         
     }
 
