@@ -14,6 +14,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var recordTitle: UILabel!
     @IBOutlet weak var recordImageTitle: UILabel!
     @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var imageView: UIView!
     
     
     
@@ -29,12 +30,18 @@ class DetailsViewController: UIViewController {
         image.layer.cornerRadius = image.frame.height/2
         image.layer.borderColor = UIColor.black.cgColor
         image.layer.borderWidth = 1
-        image.layer.shadowColor = UIColor.darkGray.cgColor
-        image.layer.shadowOpacity = 5
-        image.layer.shadowOffset = CGSize.zero
-        image.layer.shadowRadius = 20
+//        image.layer.shadowColor = UIColor.darkGray.cgColor
+//        image.layer.shadowOpacity = 5
+//        image.layer.shadowOffset = CGSize.zero
+//        image.layer.shadowRadius = 20
       //  image.layer.masksToBounds = false
         
+        imageView.backgroundColor = .black
+        imageView.layer.cornerRadius = imageView.frame.height/2
+        imageView.layer.shadowColor = UIColor.darkGray.cgColor
+        imageView.layer.shadowOpacity = 5
+        imageView.layer.shadowOffset = CGSize.zero
+        imageView.layer.shadowRadius = 20
 
     }
     

@@ -71,12 +71,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DME-ko-Em9">
-                                <rect key="frame" x="23.333333333333343" y="222" width="343.33333333333326" height="343"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckA-tS-JTi">
+                                <rect key="frame" x="12" y="210.66666666666663" width="366" height="366"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DME-ko-Em9">
+                                        <rect key="frame" x="4" y="4" width="358" height="358"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="DME-ko-Em9" secondAttribute="height" multiplier="1:1" id="x1U-p0-dcz"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="DME-ko-Em9" secondAttribute="height" multiplier="1:1" id="x1U-p0-dcz"/>
+                                    <constraint firstAttribute="bottom" secondItem="DME-ko-Em9" secondAttribute="bottom" constant="4" id="7RU-ui-AWh"/>
+                                    <constraint firstAttribute="trailing" secondItem="DME-ko-Em9" secondAttribute="trailing" constant="4" id="9mE-QA-3kK"/>
+                                    <constraint firstItem="DME-ko-Em9" firstAttribute="leading" secondItem="ckA-tS-JTi" secondAttribute="leading" constant="4" id="d2Y-up-IMQ"/>
+                                    <constraint firstItem="DME-ko-Em9" firstAttribute="top" secondItem="ckA-tS-JTi" secondAttribute="top" constant="4" id="qBn-MZ-jGn"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hmb-dn-YY7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -85,23 +97,25 @@
                             <constraint firstItem="2Nk-Mu-sRi" firstAttribute="top" secondItem="Bem-xd-nMZ" secondAttribute="bottom" constant="12" id="B9k-yE-5oV"/>
                             <constraint firstItem="KvZ-01-jdz" firstAttribute="top" secondItem="lhP-Uu-PGv" secondAttribute="bottom" constant="12" id="CfJ-ZQ-1r0"/>
                             <constraint firstItem="Bem-xd-nMZ" firstAttribute="leading" secondItem="Hmb-dn-YY7" secondAttribute="leading" constant="24" id="Gf3-zv-LsJ"/>
+                            <constraint firstItem="ckA-tS-JTi" firstAttribute="centerY" secondItem="bSC-Qb-ARi" secondAttribute="centerY" id="Gpi-hV-1Ya"/>
                             <constraint firstItem="lhP-Uu-PGv" firstAttribute="centerX" secondItem="bSC-Qb-ARi" secondAttribute="centerX" id="LDj-nI-Vrs"/>
                             <constraint firstItem="KvZ-01-jdz" firstAttribute="leading" secondItem="Hmb-dn-YY7" secondAttribute="leading" constant="24" id="NKk-t4-oV3"/>
                             <constraint firstItem="Hmb-dn-YY7" firstAttribute="trailing" secondItem="lhP-Uu-PGv" secondAttribute="trailing" constant="24" id="QPL-qh-6Fu"/>
+                            <constraint firstItem="Hmb-dn-YY7" firstAttribute="trailing" secondItem="ckA-tS-JTi" secondAttribute="trailing" constant="12" id="Rc8-N1-Ud4"/>
+                            <constraint firstItem="ckA-tS-JTi" firstAttribute="centerX" secondItem="bSC-Qb-ARi" secondAttribute="centerX" id="ScW-Lp-TBO"/>
                             <constraint firstItem="Hmb-dn-YY7" firstAttribute="trailing" secondItem="Bem-xd-nMZ" secondAttribute="trailing" constant="24" id="a8p-Q6-4pG"/>
                             <constraint firstItem="Hmb-dn-YY7" firstAttribute="trailing" secondItem="KvZ-01-jdz" secondAttribute="trailing" constant="24" id="c86-qr-n3W"/>
                             <constraint firstItem="2Nk-Mu-sRi" firstAttribute="leading" secondItem="Hmb-dn-YY7" secondAttribute="leading" constant="24" id="dX5-Kf-UY5"/>
                             <constraint firstItem="lhP-Uu-PGv" firstAttribute="leading" secondItem="Hmb-dn-YY7" secondAttribute="leading" constant="24" id="ehR-fj-KZq"/>
                             <constraint firstItem="Hmb-dn-YY7" firstAttribute="trailing" secondItem="2Nk-Mu-sRi" secondAttribute="trailing" constant="24" id="nKH-Ur-8e1"/>
-                            <constraint firstItem="DME-ko-Em9" firstAttribute="width" secondItem="bSC-Qb-ARi" secondAttribute="width" multiplier="0.88" id="nry-T5-pdo"/>
                             <constraint firstItem="Bem-xd-nMZ" firstAttribute="top" secondItem="KvZ-01-jdz" secondAttribute="bottom" constant="12" id="oHt-So-CHu"/>
-                            <constraint firstItem="DME-ko-Em9" firstAttribute="centerY" secondItem="bSC-Qb-ARi" secondAttribute="centerY" id="p9R-re-WsV"/>
-                            <constraint firstItem="DME-ko-Em9" firstAttribute="centerX" secondItem="bSC-Qb-ARi" secondAttribute="centerX" id="pKb-y1-cLU"/>
+                            <constraint firstItem="ckA-tS-JTi" firstAttribute="leading" secondItem="Hmb-dn-YY7" secondAttribute="leading" constant="12" id="uT3-Tm-2zh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QBM-Da-MyD"/>
                     <connections>
                         <outlet property="image" destination="DME-ko-Em9" id="W9c-bu-Jfu"/>
+                        <outlet property="imageView" destination="ckA-tS-JTi" id="1Zk-hv-qlf"/>
                         <outlet property="recordImageTitle" destination="2Nk-Mu-sRi" id="ud8-ad-tWj"/>
                         <outlet property="recordTitle" destination="Bem-xd-nMZ" id="cOM-bf-EXC"/>
                         <outlet property="recordType" destination="KvZ-01-jdz" id="3wU-a8-T2f"/>
