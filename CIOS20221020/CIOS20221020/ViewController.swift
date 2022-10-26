@@ -13,13 +13,11 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     var selectedRow = 0
     
- 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
        tableView.dataSource = self
-        tableView.delegate = self
+       tableView.delegate = self
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -36,20 +34,17 @@ class ViewController: UIViewController, UITableViewDelegate {
         
         switch indexPath.section{
             
-        case 0:
+        case Sections.restaurants.rawValue:
             selectedRow = indexPath.row
             performSegue(withIdentifier: "seg1", sender: nil)
             
-        case 1:
+        case Sections.recipes.rawValue:
             selectedRow = indexPath.row
             performSegue(withIdentifier: "seg2", sender: nil)
         
         default:
             break
         }
-        
-        
     }
-
 }
 

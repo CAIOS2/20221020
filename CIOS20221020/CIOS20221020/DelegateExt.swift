@@ -7,7 +7,8 @@ extension ViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {return restaurants.count}
+        if section == Sections.restaurants.rawValue {return restaurants.count
+        }
         return recipes.count
     }
     
@@ -15,7 +16,7 @@ extension ViewController: UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        if indexPath.section == 0 {
+        if indexPath.section == Sections.restaurants.rawValue {
             
             cell.textLabel?.text = restaurants[indexPath.row]
             cell.imageView?.image = UIImage(named: "rest\(indexPath.row+1)")
