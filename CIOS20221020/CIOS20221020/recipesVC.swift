@@ -9,21 +9,20 @@ import UIKit
 
 class recipesVC: UIViewController {
 
+    @IBOutlet weak var recipeImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        recipeImage.image = UIImage(named: "rest1")
+        recipeImage.layer.cornerRadius = recipeImage.frame.width / 2
+        recipeImage.layer.shadowColor = UIColor.black.cgColor
+        recipeImage.layer.shadowRadius = 20
+        recipeImage.layer.shadowOffset = CGSize(width: 5, height: 5)
+        recipeImage.layer.shadowOpacity = 0
     }
     
+    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  
 }

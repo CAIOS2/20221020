@@ -55,6 +55,8 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="TgU-Oi-1cv" id="WF9-Ke-1OM"/>
+                        <segue destination="Jwp-Og-XiE" kind="show" identifier="seg1" id="3an-Ni-6vG"/>
+                        <segue destination="Abf-4i-2LP" kind="show" identifier="seg2" id="NRu-K6-RLa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -66,11 +68,28 @@
             <objects>
                 <viewController id="Abf-4i-2LP" customClass="recipesVC" customModule="CIOS20221020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VXa-dA-P93">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Ms-Tv-55H">
+                                <rect key="frame" x="24" y="71" width="342" height="342"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9Ms-Tv-55H" secondAttribute="height" multiplier="1:1" id="RYb-hP-K2R"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="E99-TP-UQe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E99-TP-UQe" firstAttribute="trailing" secondItem="9Ms-Tv-55H" secondAttribute="trailing" constant="24" id="Dw2-tI-DlW"/>
+                            <constraint firstItem="9Ms-Tv-55H" firstAttribute="top" secondItem="E99-TP-UQe" secondAttribute="top" constant="24" id="j7t-hZ-5QQ"/>
+                            <constraint firstItem="9Ms-Tv-55H" firstAttribute="leading" secondItem="E99-TP-UQe" secondAttribute="leading" constant="24" id="tIf-rK-ofW"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="JOU-Qp-Coy"/>
+                    <connections>
+                        <outlet property="recipeImage" destination="9Ms-Tv-55H" id="WCu-QR-Yq7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLg-1t-wmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,17 +100,28 @@
             <objects>
                 <viewController id="Jwp-Og-XiE" customClass="restVC" customModule="CIOS20221020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q7r-A8-cJf">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NeM-pO-fNu">
-                                <rect key="frame" x="75" y="168" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NeM-pO-fNu">
+                                <rect key="frame" x="24" y="71" width="342" height="342"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NeM-pO-fNu" secondAttribute="height" multiplier="1:1" id="ZQo-FC-0Eo"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BtK-es-eAg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BtK-es-eAg" firstAttribute="trailing" secondItem="NeM-pO-fNu" secondAttribute="trailing" constant="24" id="9Hq-qN-Lsi"/>
+                            <constraint firstItem="NeM-pO-fNu" firstAttribute="top" secondItem="BtK-es-eAg" secondAttribute="top" constant="24" id="Idf-F1-N4U"/>
+                            <constraint firstItem="NeM-pO-fNu" firstAttribute="leading" secondItem="BtK-es-eAg" secondAttribute="leading" constant="24" id="th2-dA-qG5"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="vNW-x8-0ah"/>
+                    <connections>
+                        <outlet property="restimage" destination="NeM-pO-fNu" id="WJb-sg-5z3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hri-7P-ynY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

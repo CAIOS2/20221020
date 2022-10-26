@@ -1,6 +1,6 @@
 import UIKit
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate{
+extension ViewController: UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
         2

@@ -9,21 +9,19 @@ import UIKit
 
 class restVC: UIViewController {
 
+    @IBOutlet weak var restimage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        restimage.image = UIImage(named: "rest1")
+        restimage.layer.cornerRadius = restimage.frame.width / 2
+        restimage.layer.shadowColor = UIColor.black.cgColor
+        restimage.layer.shadowRadius = 20
+        restimage.layer.shadowOffset = CGSize(width: 5, height: 5)
+        restimage.layer.shadowOpacity = 0
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

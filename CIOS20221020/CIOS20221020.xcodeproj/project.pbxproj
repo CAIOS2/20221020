@@ -10,7 +10,6 @@
 		684346AF29086AD300ED1D13 /* restVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684346AE29086AD300ED1D13 /* restVC.swift */; };
 		684346B129086B1200ED1D13 /* recipesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684346B029086B1200ED1D13 /* recipesVC.swift */; };
 		68C71A202901C0BF000B0683 /* DelegateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C71A1F2901C0BF000B0683 /* DelegateExt.swift */; };
-		68C71A222901C3DB000B0683 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C71A212901C3DB000B0683 /* TableViewController.swift */; };
 		68CE34DE29053F82001EAAEF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE34DD29053F82001EAAEF /* Data.swift */; };
 		A06B4A6D2901B2B000932DEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06B4A6C2901B2B000932DEE /* AppDelegate.swift */; };
 		A06B4A6F2901B2B000932DEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06B4A6E2901B2B000932DEE /* SceneDelegate.swift */; };
@@ -24,7 +23,6 @@
 		684346AE29086AD300ED1D13 /* restVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = restVC.swift; sourceTree = "<group>"; };
 		684346B029086B1200ED1D13 /* recipesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipesVC.swift; sourceTree = "<group>"; };
 		68C71A1F2901C0BF000B0683 /* DelegateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateExt.swift; sourceTree = "<group>"; };
-		68C71A212901C3DB000B0683 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		68CE34DD29053F82001EAAEF /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		A06B4A692901B2B000932DEE /* CIOS20221020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CIOS20221020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A06B4A6C2901B2B000932DEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 				A06B4A722901B2B000932DEE /* Main.storyboard */,
 				684346B029086B1200ED1D13 /* recipesVC.swift */,
 				684346AE29086AD300ED1D13 /* restVC.swift */,
-				68C71A212901C3DB000B0683 /* TableViewController.swift */,
 				68CE34DD29053F82001EAAEF /* Data.swift */,
 				68C71A1F2901C0BF000B0683 /* DelegateExt.swift */,
 				A06B4A752901B2B100932DEE /* Assets.xcassets */,
@@ -157,7 +154,6 @@
 				68CE34DE29053F82001EAAEF /* Data.swift in Sources */,
 				A06B4A712901B2B000932DEE /* ViewController.swift in Sources */,
 				A06B4A6D2901B2B000932DEE /* AppDelegate.swift in Sources */,
-				68C71A222901C3DB000B0683 /* TableViewController.swift in Sources */,
 				684346AF29086AD300ED1D13 /* restVC.swift in Sources */,
 				684346B129086B1200ED1D13 /* recipesVC.swift in Sources */,
 				A06B4A6F2901B2B000932DEE /* SceneDelegate.swift in Sources */,

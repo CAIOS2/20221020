@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -16,9 +16,24 @@ class ViewController: UIViewController {
         
        tableView.dataSource = self
         tableView.delegate = self
-        
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        switch indexPath.section{
+            
+        case 0:
+            performSegue(withIdentifier: "seg1", sender: nil)
+            
+        case 1:
+            performSegue(withIdentifier: "seg2", sender: nil)
+        
+        default:
+            break
+        }
+        
+        
+    }
 
 }
 
