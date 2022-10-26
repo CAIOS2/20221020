@@ -77,18 +77,28 @@
                                     <constraint firstAttribute="width" secondItem="9Ms-Tv-55H" secondAttribute="height" multiplier="1:1" id="RYb-hP-K2R"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOg-fV-3XI">
+                                <rect key="frame" x="24" y="437" width="342" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="E99-TP-UQe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ZOg-fV-3XI" firstAttribute="top" secondItem="9Ms-Tv-55H" secondAttribute="bottom" constant="24" id="9yA-R5-jeh"/>
                             <constraint firstItem="E99-TP-UQe" firstAttribute="trailing" secondItem="9Ms-Tv-55H" secondAttribute="trailing" constant="24" id="Dw2-tI-DlW"/>
+                            <constraint firstItem="ZOg-fV-3XI" firstAttribute="centerX" secondItem="9Ms-Tv-55H" secondAttribute="centerX" id="ach-hF-8LK"/>
                             <constraint firstItem="9Ms-Tv-55H" firstAttribute="top" secondItem="E99-TP-UQe" secondAttribute="top" constant="24" id="j7t-hZ-5QQ"/>
                             <constraint firstItem="9Ms-Tv-55H" firstAttribute="leading" secondItem="E99-TP-UQe" secondAttribute="leading" constant="24" id="tIf-rK-ofW"/>
+                            <constraint firstItem="ZOg-fV-3XI" firstAttribute="width" secondItem="9Ms-Tv-55H" secondAttribute="width" id="x4S-78-JFC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JOU-Qp-Coy"/>
                     <connections>
                         <outlet property="recipeImage" destination="9Ms-Tv-55H" id="WCu-QR-Yq7"/>
+                        <outlet property="recipeLabels" destination="ZOg-fV-3XI" id="tV3-sJ-Gv3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLg-1t-wmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -109,23 +119,33 @@
                                     <constraint firstAttribute="width" secondItem="NeM-pO-fNu" secondAttribute="height" multiplier="1:1" id="ZQo-FC-0Eo"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKY-20-1QW">
+                                <rect key="frame" x="24" y="437" width="342" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BtK-es-eAg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BtK-es-eAg" firstAttribute="trailing" secondItem="NeM-pO-fNu" secondAttribute="trailing" constant="24" id="9Hq-qN-Lsi"/>
                             <constraint firstItem="NeM-pO-fNu" firstAttribute="top" secondItem="BtK-es-eAg" secondAttribute="top" constant="24" id="Idf-F1-N4U"/>
+                            <constraint firstItem="KKY-20-1QW" firstAttribute="centerX" secondItem="NeM-pO-fNu" secondAttribute="centerX" id="KCp-SA-2yu"/>
+                            <constraint firstItem="KKY-20-1QW" firstAttribute="top" secondItem="NeM-pO-fNu" secondAttribute="bottom" constant="24" id="dRc-w9-6ro"/>
+                            <constraint firstItem="KKY-20-1QW" firstAttribute="width" secondItem="NeM-pO-fNu" secondAttribute="width" id="dYJ-Ts-rOr"/>
                             <constraint firstItem="NeM-pO-fNu" firstAttribute="leading" secondItem="BtK-es-eAg" secondAttribute="leading" constant="24" id="th2-dA-qG5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vNW-x8-0ah"/>
                     <connections>
+                        <outlet property="restLabel" destination="KKY-20-1QW" id="YBC-83-wy7"/>
                         <outlet property="restimage" destination="NeM-pO-fNu" id="WJb-sg-5z3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hri-7P-ynY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1117" y="17"/>
+            <point key="canvasLocation" x="1116.9230769230769" y="16.350710900473931"/>
         </scene>
     </scenes>
     <resources>

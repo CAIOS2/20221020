@@ -10,11 +10,16 @@ import UIKit
 class recipesVC: UIViewController {
 
     @IBOutlet weak var recipeImage: UIImageView!
+    @IBOutlet weak var recipeLabels: UILabel!
+    
+    var indexRow:Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        recipeLabels.text = recipes[indexRow]
 
-        recipeImage.image = UIImage(named: "rest1")
+        recipeImage.image = UIImage(named: "rec\(indexRow + 1)")
         recipeImage.layer.cornerRadius = recipeImage.frame.width / 2
         recipeImage.layer.shadowColor = UIColor.black.cgColor
         recipeImage.layer.shadowRadius = 20
