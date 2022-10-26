@@ -144,7 +144,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "goToDetails", sender: nil)
+        
         
         let recordsOfType = dataByTypes(String(describing:RecordType.allCases[indexPath.section]))
         
@@ -157,6 +157,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         selectedRecordimageTitle    = recordImageTitle
         
        // print(recordsOfType)
+        performSegue(withIdentifier: "goToDetails", sender: nil)
         
     }
     
