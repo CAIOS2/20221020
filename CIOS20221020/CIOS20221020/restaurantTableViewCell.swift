@@ -27,4 +27,5 @@ class restaurantTableViewCell: UITableViewCell {
         restaurantLabel.text = restaurantName
     }
     
+    
 }
